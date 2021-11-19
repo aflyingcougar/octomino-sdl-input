@@ -89,7 +89,7 @@ EXPORT void CALL GetKeys(int Control, BUTTONS *Keys)
     Keys->D_DPAD = i.ddown;
     Keys->U_DPAD = i.dup;
     Keys->START_BUTTON = i.start;
-    Keys->Z_TRIG = threshold(i.altrig, 0.25f) > 0;
+    Keys->Z_TRIG = threshold(i.artrig, 0.25f) > 0;
     Keys->A_BUTTON = i.a || i.b;
     Keys->B_BUTTON = i.x || i.y;
 
@@ -97,7 +97,7 @@ EXPORT void CALL GetKeys(int Control, BUTTONS *Keys)
     Keys->L_CBUTTON = threshold(i.arx, 0.25f) < 0;
     Keys->D_CBUTTON = threshold(i.ary, 0.25f) > 0;
     Keys->U_CBUTTON = threshold(i.ary, 0.25f) < 0;
-    Keys->R_TRIG = threshold(i.artrig, 0.25f) > 0 || i.rshoul;
+    Keys->R_TRIG = threshold(i.altrig, 0.25f) > 0 || i.rshoul;
     Keys->L_TRIG = i.lshoul;
 
     n64_analog(
